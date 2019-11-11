@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import {student} from  './student.model'
+import {Student} from  './student.model'
 
 
 @Component({
@@ -9,8 +9,7 @@ import {student} from  './student.model'
 })
 export class StudentComponent implements OnInit {
   
-  @Input() name: string
-  @Input() isJedi: boolean
+  @Input() student:Student
  
   constructor() { }
 

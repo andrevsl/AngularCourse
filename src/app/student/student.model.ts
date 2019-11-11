@@ -1,7 +1,7 @@
-export interface student{
+export interface Student{
 
 name:string
-isJedi: Boolean
+isJedi: boolean
 temple?: string
 
 }
