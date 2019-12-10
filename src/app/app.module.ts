@@ -11,7 +11,11 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { RestaurantComponent } from './restaurants/restaurant/restaurant.component'
-import { RestaurantsService } from './restaurants/restaurant.service'
+import { RestaurantsService } from './restaurants/restaurant.service';
+import { RestaurantDetailComponent } from './restaurants/restaurant-detail/restaurant-detail.component';
+import { MenuComponent } from './restaurants/restaurant-detail/menu/menu.component';
+import { ShoppingCartComponent } from './restaurants/restaurant-detail/shopping-cart/shopping-cart.component';
+import { MenuItemComponent } from './restaurants/restaurant-detail/menu-item/menu-item.component'
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { RestaurantsService } from './restaurants/restaurant.service'
     HomeComponent,
     AboutComponent,
     RestaurantsComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    RestaurantDetailComponent,
+    MenuComponent,
+    ShoppingCartComponent,
+    MenuItemComponent
   ],
   imports: [
     BrowserModule,
