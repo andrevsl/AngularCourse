@@ -1,5 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+// New implementation for LOCALE_ID 
+import { NgModule,LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt);
+// end
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
@@ -39,7 +44,7 @@ import { ShoppingCartService } from './restaurants/restaurant-detail/shopping-ca
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [RestaurantsService,ShoppingCartService],
+  providers: [RestaurantsService,ShoppingCartService,{provide:LOCALE_ID, useValue:'pt'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
