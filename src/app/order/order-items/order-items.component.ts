@@ -32,6 +32,6 @@ export class OrderItemsComponent implements OnInit {
     this.remove.emit(item)
   }
 
-
+  
 
 }
