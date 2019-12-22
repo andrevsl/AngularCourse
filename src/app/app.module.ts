@@ -7,7 +7,7 @@ registerLocaleData(localePt);
 // end
 import { HttpModule } from '@angular/http';
 import { RouterModule,PreloadAllModules } from '@angular/router';
-
+import {LocationStrategy,HashLocationStrategy } from '@angular/common'
 import {ROUTES} from './app.routes';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
@@ -48,7 +48,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SharedModule.forRoot(),
     RouterModule.forRoot(ROUTES,{preloadingStrategy:PreloadAllModules})
   ],
-  providers: [{provide:LOCALE_ID, useValue:'pt'}],
+  providers: [{provide:LocationStrategy,useClass: HashLocationStrategy},{provide:LOCALE_ID, useValue:'pt'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
