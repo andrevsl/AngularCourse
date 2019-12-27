@@ -3,7 +3,7 @@
     {
       "id": "bread-bakery",
       "name": "Bread & Bakery",
-      "category": "Bakery",
+      "category": "Padaria",
       "deliveryEstimate": "25m",
       "rating": 4.9,
       "imagePath": "assets/img/restaurants/breadbakery.png",
@@ -23,7 +23,7 @@
     {
       "id": "coffee-corner",
       "name": "Coffee Corner",
-      "category": "Coffee Shop",
+      "category": "Cafeteria",
       "deliveryEstimate": "30-40m",
       "rating": 4.8,
       "imagePath": "assets/img/restaurants/coffeecorner.png",
@@ -43,7 +43,7 @@
     {
       "id": "ice-cream",
       "name": "Ice Cream",
-      "category": "Ice Creams",
+      "category": "Sorvetes",
       "deliveryEstimate": "40-65m",
       "rating": 4.5,
       "imagePath": "assets/img/restaurants/icy.png",
@@ -372,104 +372,28 @@
   ],
   "orders": [
     {
-      "address": "Paito",
-      "number": "12",
+      "name": "asdasd",
+      "email": "test@test.com",
+      "emailConfirmation": "test@test.com",
+      "address": "adfafasfas",
+      "number": "5",
       "optionalAddress": "",
-      "paymentOption": "MON",
+      "paymentOption": "DEB",
       "OrderItems": [
         {
-          "quantity": 2,
+          "quantity": 1,
           "menuId": "cup-cake"
         },
         {
           "quantity": 2,
           "menuId": "donut"
+        },
+        {
+          "quantity": 1,
+          "menuId": "bread"
         }
       ],
       "id": 1
-    },
-    {
-      "address": "fsdf121",
-      "number": "1",
-      "optionalAddress": "21212",
-      "paymentOption": "MON",
-      "OrderItems": [
-        {
-          "quantity": 1,
-          "menuId": "fries"
-        },
-        {
-          "quantity": 1,
-          "menuId": "burger"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "address": "sdasda",
-      "number": "12",
-      "optionalAddress": "",
-      "paymentOption": "DEB",
-      "OrderItems": [
-        {
-          "quantity": 1,
-          "menuId": "burger"
-        },
-        {
-          "quantity": 1,
-          "menuId": "fries"
-        }
-      ],
-      "id": 3
-    },
-    {
-      "address": "fsfdafsdf",
-      "number": "78",
-      "optionalAddress": "",
-      "paymentOption": "DEB",
-      "OrderItems": [
-        {
-          "quantity": 1,
-          "menuId": "straw"
-        },
-        {
-          "quantity": 1,
-          "menuId": "cake"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "name": "Antony",
-      "email": "test@teste.com",
-      "emailConfirmation": "test@teste.com",
-      "address": "Rua Nested",
-      "number": "12",
-      "optionalAddress": "",
-      "paymentOption": "MON",
-      "OrderItems": [
-        {
-          "quantity": 1,
-          "menuId": "cup-cake"
-        }
-      ],
-      "id": 5
-    },
-    {
-      "name": "aasddd",
-      "email": "test@test.com",
-      "emailConfirmation": "test@test.com",
-      "address": "asdasdas",
-      "number": "25",
-      "optionalAddress": "",
-      "paymentOption": "DEB",
-      "OrderItems": [
-        {
-          "quantity": 2,
-          "menuId": "fries"
-        }
-      ],
-      "id": 6
     }
   ]
 }

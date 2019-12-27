@@ -41,9 +41,9 @@ export class SnackbarComponent implements OnInit {
       .subscribe(timer=>this.snackVisibility='hidden')
   }
 
-  toggleSnack(){
+/* toggleSnack(){
     this.snackVisibility=this.snackVisibility=== 'hidden' ? 'visible' : 'hidden'
 
-  }
+  }*/
 
 }

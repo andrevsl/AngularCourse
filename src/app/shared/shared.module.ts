@@ -5,9 +5,9 @@ import { RatingComponent } from './rating/rating.component';
 
 import {FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { CommonModule } from '@angular/common';
-import { ShoppingCartService } from 'app/restaurants/restaurant-detail/shopping-cart/shopping-cart.service';
-import { RestaurantsService } from 'app/restaurants/restaurant.service';
-import { OrderService } from 'app/order/order.service';
+import { ShoppingCartService } from '../restaurants/restaurant-detail/shopping-cart/shopping-cart.service';
+import { RestaurantsService } from '../restaurants/restaurant.service';
+import { OrderService } from '../order/order.service';
 import { SnackbarComponent } from './messages/snackbar/snackbar.component';
 import { NotificationService } from './messages/notification.service';
 
