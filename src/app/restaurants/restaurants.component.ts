@@ -5,6 +5,8 @@ import {Restaurant} from './restaurant/restaurant.model'
 import {RestaurantsService} from "./restaurant.service"
 
 import 'rxjs/add/operator/switchMap'
+import 'rxjs/add/operator/do'
+import 'rxjs/add/operator/debounceTime'
 
 @Component({
   selector: 'mt-restaurants',
@@ -43,6 +45,9 @@ export class RestaurantsComponent implements OnInit {
 
       
     this.searchControl.valueChanges
+            .debounceTime(500)
+            .distinctUntilChanged()
+            .do(searchTerm=> console.log(`q=${searchTerm}`))
             .switchMap(searchTerm=> 
               this.restaurantsService.restaurants(searchTerm))
             .subscribe(restaurants =>this.restaurants=restaurants)

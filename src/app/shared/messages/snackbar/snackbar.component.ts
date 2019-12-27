@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import 'rxjs/add/observable/timer'
 import 'rxjs/add/operator/do'
 import 'rxjs/add/operator/switchMap'
+import 'rxjs/add/operator/distinctUntilChanged'
 
 @Component({
   selector: 'mt-snackbar',
