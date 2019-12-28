@@ -41,7 +41,7 @@ export class RestaurantsComponent implements OnInit {
     this.searchControl=this.fb.control('')
     this.searchForm=this.fb.group({
       searchControl: this.searchControl
-    })
+      })
 
       
     this.searchControl.valueChanges
