@@ -2,6 +2,7 @@
 // Commands to run server
 // npm link json-server
 // node server.js
+// Backen command run server-> nodemon --watch backend backend/dist/server.js
 exports.__esModule = true;
 var jsonServer = require("json-server");
 var fs = require("fs");
@@ -18,7 +19,8 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 //
 server.post('/login', auth_1.handleAuthentication);
-server.use('/orders', authz_1.handleAuthorization);
+// Authorization of Order
+server.get('/orders', authz_1.handleAuthorization);
 // Use default router
 server.use(router);
 var options = {

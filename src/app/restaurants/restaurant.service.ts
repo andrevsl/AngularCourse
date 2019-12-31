@@ -6,9 +6,7 @@ import 'rxjs/add/operator/catch'
 
 import { HttpClient,HttpParams } from '@angular/common/http';
 import {MEAT_API} from '../app.api'
-import {ErrorHandler} from '../app.error-handler'
 import { MenuItem } from './restaurant-detail/menu-item/menu-item.model';
-import { IfStmt } from '@angular/compiler';
 @Injectable()
 export class RestaurantsService{
 

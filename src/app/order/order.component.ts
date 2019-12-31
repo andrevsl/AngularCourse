@@ -5,7 +5,8 @@ import { OrderService } from './order.service';
 import { CartItem } from 'app/restaurants/restaurant-detail/shopping-cart/cart-item.model';
 import { OrderItem } from './order.model';
 import {Router} from '@angular/router'
-import { toBase64String } from '@angular/compiler/src/output/source_map';
+
+
 @Component({
   selector: 'mt-order',
   templateUrl: './order.component.html'

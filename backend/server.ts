@@ -1,6 +1,7 @@
 // Commands to run server
 // npm link json-server
 // node server.js
+// Backen command run server-> nodemon --watch backend backend/dist/server.js
 
 import * as jsonServer from 'json-server'
 import {Express} from 'express'
@@ -24,7 +25,8 @@ server.use(jsonServer.bodyParser)
 
 //
 server.post('/login',handleAuthentication)
-server.use('/orders',handleAuthorization)
+// Authorization of Order
+server.get('/orders',handleAuthorization)
 
 
 // Use default router

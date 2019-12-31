@@ -19,6 +19,6 @@ export const handleAuthentication=(req:Request,resp:Response) =>{
         return false
         }
         const dbUser=users[user.email]
-        return dbUser!==undefined &&dbUser.matches(user)
+        return dbUser!==undefined && dbUser.matches(user)
     }
 }
