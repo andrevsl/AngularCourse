@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 // New implementation for LOCALE_ID 
-import { NgModule,LOCALE_ID } from '@angular/core';
+import { NgModule,LOCALE_ID, ErrorHandler } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 registerLocaleData(localePt);
@@ -20,6 +20,7 @@ import { MenuComponent } from './restaurants/restaurant-detail/menu/menu.compone
 import { ShoppingCartComponent } from './restaurants/restaurant-detail/shopping-cart/shopping-cart.component';
 import { MenuItemComponent } from './restaurants/restaurant-detail/menu-item/menu-item.component'
 import { ReviewsComponent } from './restaurants/restaurant-detail/reviews/reviews.component'
+import { ApplicationErrorHandler} from './app.error-handler'
 
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { SharedModule } from './shared/shared.module';
@@ -51,7 +52,8 @@ import { UserDetailComponent } from './header/user-detail/user-detail.component'
     SharedModule.forRoot(),
     RouterModule.forRoot(ROUTES,{preloadingStrategy:PreloadAllModules})
   ],
-  providers: [{provide:LOCALE_ID, useValue:'pt'}],
+  providers: [{provide:LOCALE_ID, useValue:'pt'},
+              {provide: ErrorHandler, useClass: ApplicationErrorHandler}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
