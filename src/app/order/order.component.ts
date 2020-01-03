@@ -1,6 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {radioOption} from '../shared/radio/radio-option.model'
-import {FormGroup,FormBuilder,Validators, AbstractControl} from '@angular/forms'
+import {FormGroup,FormBuilder,Validators, AbstractControl, FormControl} from '@angular/forms'
 import { OrderService } from './order.service';
 import { CartItem } from 'app/restaurants/restaurant-detail/shopping-cart/cart-item.model';
 import { OrderItem } from './order.model';
@@ -34,8 +34,10 @@ export class OrderComponent implements OnInit {
                        private router: Router,
                        private formBuilder: FormBuilder) {}
   ngOnInit() {
-    this.orderForm=this.formBuilder.group({  
-      name: this.formBuilder.control('',[Validators.required, Validators.minLength(5)]),
+    this.orderForm=new FormGroup ({  
+      name: new FormControl('',{
+        validators: [Validators.required, Validators.minLength(5)]
+      }),
       email: this.formBuilder.control('',[Validators.required, Validators.pattern(this.emailPattern)]),
       emailConfirmation: this.formBuilder.control('',[Validators.required, Validators.pattern(this.emailPattern)]),
       address: this.formBuilder.control('',[Validators.required, Validators.minLength(5)]),
@@ -43,7 +45,7 @@ export class OrderComponent implements OnInit {
       optionalAddress: this.formBuilder.control(''),
       paymentOption: this.formBuilder.control('',[Validators.required])
 
-    }, {validator: OrderComponent.equalsTo})
+    }, {validators: [OrderComponent.equalsTo],updateOn: 'blur'})
   }
 
   static equalsTo(group:AbstractControl):{[key:string]:boolean}{
