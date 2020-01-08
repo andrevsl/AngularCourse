@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  link href="rating.css" rel="stylesheet">
+</head>
+<body>
+  <mt-rating rate="3"></mt-rating>
+  <script src="rating.js"></script>
+  <script>document.querySelector('mt-rating').addEventListener('rated',(event)=>{
+      console.log('selected value',event.detail)
+  })
+   
+  </script>
+</body>
+</html>
